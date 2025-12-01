@@ -1,0 +1,252 @@
+{
+  "eval_set_id": "evalset36f444",
+  "name": "evalset36f444",
+  "eval_cases": [
+    {
+      "eval_id": "case7c6927",
+      "conversation": [
+        {
+          "invocation_id": "e-1f6b43ea-77a4-4091-ad95-323c64d83fb1",
+          "user_content": {
+            "parts": [
+              {
+                "text": "User ID: user1 Purchasing: iphone Marketplace: Best Buy Amount: $1000\n\n"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "{\"best_card_name\": \"saffire-reserve\", \"reward_points\": \"2000\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "reward_calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-71353ec6-88fe-4357-afd9-2385daaf5e3a",
+                        "args": {
+                          "user_id": "user1"
+                        },
+                        "name": "get_user_benefits"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "reward_calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-71353ec6-88fe-4357-afd9-2385daaf5e3a",
+                        "name": "get_user_benefits",
+                        "response": {
+                          "result": [
+                            {
+                              "card_name": "saffire-reserve",
+                              "issuer": "chase",
+                              "rewards": {
+                                "groceries": 5.0,
+                                "travel": 8.0,
+                                "other": 2.0
+                              }
+                            },
+                            {
+                              "card_name": "freedom",
+                              "issuer": "chase",
+                              "rewards": {
+                                "groceries": 3.0,
+                                "travel": 2.0,
+                                "other": 1.0
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "reward_calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "The user wants to know the best card to use for purchasing an iPhone from Best Buy for $1000.\nI have the user's benefits which are:\n- saffire-reserve: 5x on groceries, 2x on other, 8x on travel\n-freedom: 3x on groceries, 1x on other, 2x on travel\n\nThe purchase is for an iPhone, which falls under the 'electronics' category. Since there are no specific rewards for electronics, I will use the 'other' category.\n\nHere's the calculation:\n- saffire-reserve: $1000 * 2 = 2000 points\n-freedom: $1000 * 1 = 1000 points\n\nThe saffire-reserve card offers the highest reward points for this purchase."
+                    },
+                    {
+                      "function_call": {
+                        "id": "adk-7c414a4f-f51d-417f-9d97-94e1a5789a55",
+                        "args": {
+                          "best_card_name": "saffire-reserve",
+                          "reward_points": "2000"
+                        },
+                        "name": "set_model_response"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "reward_calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-7c414a4f-f51d-417f-9d97-94e1a5789a55",
+                        "name": "set_model_response",
+                        "response": {
+                          "best_card_name": "saffire-reserve",
+                          "reward_points": "2000"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764572774.143571
+        },
+        {
+          "invocation_id": "e-f2f06e3e-19bd-47a0-84b6-ad957e033ae3",
+          "user_content": {
+            "parts": [
+              {
+                "text": "User ID: user1 Purchasing: iphone Marketplace: Best Buy Amount: $1000"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "{\"best_card_name\": \"saffire-reserve\", \"reward_points\": \"2000\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "reward_calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-10b82550-00be-4d33-9e2c-39a53d2df270",
+                        "args": {
+                          "user_id": "user1"
+                        },
+                        "name": "get_user_benefits"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "reward_calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-10b82550-00be-4d33-9e2c-39a53d2df270",
+                        "name": "get_user_benefits",
+                        "response": {
+                          "result": [
+                            {
+                              "card_name": "saffire-reserve",
+                              "issuer": "chase",
+                              "rewards": {
+                                "groceries": 5.0,
+                                "travel": 8.0,
+                                "other": 2.0
+                              }
+                            },
+                            {
+                              "card_name": "freedom",
+                              "issuer": "chase",
+                              "rewards": {
+                                "groceries": 3.0,
+                                "travel": 2.0,
+                                "other": 1.0
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "reward_calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "The user is asking to calculate the reward points for purchasing an iPhone for $1000 from Best Buy.\nThe marketplace classifier identified the category as 'electronics'.\nSince there is no specific reward category for electronics, the 'other' reward category will be used.\n\nCard benefits:\n- saffire-reserve: 2 points per dollar on 'other' purchases.\n-freedom: 1 point per dollar on 'other' purchases.\n\nCalculations:\n- saffire-reserve: $1000 * 2 points/dollar = 2000 points\n-freedom: $1000 * 1 point/dollar = 1000 points\n\nThe 'saffire-reserve' card offers the highest reward points (2000 points) for this purchase."
+                    },
+                    {
+                      "function_call": {
+                        "id": "adk-548a5ee5-df2d-4d33-9542-7e354c256c7e",
+                        "args": {
+                          "reward_points": "2000",
+                          "best_card_name": "saffire-reserve"
+                        },
+                        "name": "set_model_response"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "reward_calculator_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-548a5ee5-df2d-4d33-9542-7e354c256c7e",
+                        "name": "set_model_response",
+                        "response": {
+                          "best_card_name": "saffire-reserve",
+                          "reward_points": "2000"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764572939.63344
+        }
+      ],
+      "session_input": {
+        "app_name": "Rewards_Calculator_Agent",
+        "user_id": "user",
+        "state": {
+          "classified_marketplace_reward": ""
+        }
+      },
+      "creation_timestamp": 1764572967.555083
+    }
+  ],
+  "creation_timestamp": 1764572953.608041
+}

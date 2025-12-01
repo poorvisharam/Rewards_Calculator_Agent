@@ -1,5 +1,5 @@
-from models.benefits import Benefits_Data, Benefits
-from models.user import Users, User, get_cards_user_has
+from ..models.benefits import Benefits_Data, Benefits
+from ..models.user import get_cards_user_has
 
 def get_user_benefits(user_id: str) -> list[Benefits]:
     cards_user_has = get_cards_user_has(user_id)

@@ -1,8 +1,6 @@
 from google.adk.agents import Agent
 from google.adk.models.google_llm import Gemini
 from google.adk.tools import google_search
-from google.adk.tools.function_tool import FunctionTool
-from tools.single_class import enforce_single_word
 
 marketplace_classifier = Agent(
     name="marketplace_classifier",

@@ -1,14 +1,8 @@
 from google.adk.agents import Agent
 from google.adk.models.google_llm import Gemini
 from google.adk.tools.function_tool import FunctionTool
-from models.best_card import BestCardOutput
-from tools.user_benefits import get_user_benefits
-
-
-# class BestCardInputs(BaseModel):
-#     purchase_reward_category: str
-#     benefits_user_has: list[Benefits]
-#     amount: int = None
+from ..models.best_card import BestCardOutput
+from ..tools.user_benefits import get_user_benefits
 
 reward_calculator_agent = Agent(
     name="reward_calculator_agent",
